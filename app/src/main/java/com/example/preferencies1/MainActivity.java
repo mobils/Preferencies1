@@ -20,13 +20,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        TextView textv = findViewById(R.id.text);
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         if (preferences.contains("signature")) {
             String s = preferences.getString("signature", "");
+            textv.setText(" Preferència: Nom: " + s);
+
         }
 
-        TextView textv = findViewById(R.id.text);
-        textv.setText(preferences.getString("signature", ""));
+
 
     }
 

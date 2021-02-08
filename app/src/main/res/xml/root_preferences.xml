@@ -1,4 +1,4 @@
-<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <PreferenceCategory app:title="@string/messages_header" app:icon="@drawable/ic_baseline_message_24">
 
@@ -42,10 +42,10 @@
             app:entryValues="@array/figureCodes"/>
 
         <SeekBarPreference
-            app:key="seekbar"
-            app:title="@string/title_seekbar_preference"
-            app:max="10"
-            app:defaultValue="5"/>
+            android:key="seekbar"
+            android:title="@string/title_seekbar_preference"
+            android:max="10"
+            android:defaultValue="5"/>
 
     </PreferenceCategory>
 
