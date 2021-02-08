@@ -34,7 +34,35 @@
             app:summaryOff="@string/attachment_summary_off"
             app:summaryOn="@string/attachment_summary_on"
             app:title="@string/attachment_title" />
+        <DropDownPreference
+            app:key="dropdown"
+            app:title="@string/title_dropdown_preference"
+            app:entries="@array/figures"
+            app:useSimpleSummaryProvider="true"
+            app:entryValues="@array/figureCodes"/>
 
+        <SeekBarPreference
+            app:key="seekbar"
+            app:title="@string/title_seekbar_preference"
+            app:max="10"
+            app:defaultValue="5"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Ajustes del juego">
+        <ListPreference
+            app:key="figure"
+            app:title="Tipo de figura"
+            app:summary="Pulse para mostrar la lista"
+            app:entries="@array/figures"
+            app:entryValues="@array/figureCodes"
+            app:dialogTitle="Elija la figura inicial"
+            app:defaultValue="circulo"/>
+        <CheckBoxPreference
+            app:key="music"
+            app:title="Música de fondo"
+            app:summary="Marque si desea escuchar música"
+            app:defaultValue="false"/>
     </PreferenceCategory>
 
 </PreferenceScreen>
